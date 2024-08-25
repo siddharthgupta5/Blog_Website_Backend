@@ -35,7 +35,7 @@ npm install
 Create a .env file in the root of the project directory. This file should contain environment variables used by the application. Here is a sample .env file:
 
 ```bash
-PORT=3000
+PORT=5000
 MONGO_URI=mongodb://localhost:27017/your-database
 SECRET_KEY=your_secret_key
 ```
