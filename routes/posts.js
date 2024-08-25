@@ -6,7 +6,7 @@ const Post=require('../models/Post')
 const Comment=require('../models/Comment')
 const checkTok = require('../checkTok')
 
-router.post("/create",checkTok ,async (req,res)=>{
+router.post("/create",async (req,res)=>{
     try{
         const newPost=new Post(req.body)
 
@@ -31,7 +31,7 @@ router.get("/:id",async (req,res)=>{
     }
 })
 
-router.put("/:id",checkTok ,async (req,res)=>{
+router.put("/:id",async (req,res)=>{
     try{
        
         const updatedPost=await Post.findByIdAndUpdate(req.params.id,{$set:req.body},{new:true})
@@ -44,7 +44,7 @@ router.put("/:id",checkTok ,async (req,res)=>{
 })
 
 
-router.delete("/:id",checkTok ,async (req,res)=>{
+router.delete("/:id",async (req,res)=>{
     try{
         await Post.findByIdAndDelete(req.params.id)
         await Comment.deleteMany({postId:req.params.id})
