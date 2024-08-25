@@ -20,7 +20,7 @@ First, clone this repository to your local machine:
 ```bash
 git clone https://github.com/yourusername/your-repository-name.git
 cd your-repository-name
-```bash
+```
 
 ### Install Dependencies
 
@@ -28,6 +28,7 @@ Run the following command to install all required dependencies:
 
 ```bash
 npm install
+```
 
 ### Environment Variables
 
@@ -37,7 +38,7 @@ Create a .env file in the root of the project directory. This file should contai
 PORT=3000
 MONGO_URI=mongodb://localhost:27017/your-database
 SECRET_KEY=your_secret_key
-
+```
 
 Replace the placeholder values with your actual configuration details.
 
@@ -47,5 +48,14 @@ To start the application, use the following command:
 
 ```bash
 npm start
+```
 
 The server will start and listen on the port specified in the `.env` file or default to port `3000`.
+
+### Development Mode
+
+For development, you can use `nodemon` to automatically restart the server on code changes. Start the server in development mode with:
+
+```bash
+npm run server
+```
